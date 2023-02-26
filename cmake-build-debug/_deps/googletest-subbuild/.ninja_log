@@ -1,0 +1,21 @@
+# ninja log v5
+1504	1554	6991103089998095	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	b4bdf39edde72cf6
+1	40	6991103074874703	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	e4cbd94afcfbcde5
+1504	1554	6991103089998095	C:/Users/dimak/CLionProjects/endgame/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	b4bdf39edde72cf6
+1376	1417	6991103088627786	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	317b985d1182edff
+1	40	6991103074874703	C:/Users/dimak/CLionProjects/endgame/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	e4cbd94afcfbcde5
+1376	1417	6991103088627786	C:/Users/dimak/CLionProjects/endgame/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	317b985d1182edff
+41	1376	6991103088207692	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	75ab95222a8df012
+1417	1455	6991103089017870	C:/Users/dimak/CLionProjects/endgame/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	e6ffc28202230852
+41	1376	6991103088207692	C:/Users/dimak/CLionProjects/endgame/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	75ab95222a8df012
+1417	1455	6991103089017870	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	e6ffc28202230852
+1455	1503	6991103089487975	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	cea4b8e1fbfbfc9e
+1645	1699	6991103091458421	CMakeFiles/googletest-populate-complete	e01c5fe24efd625b
+1455	1503	6991103089487975	C:/Users/dimak/CLionProjects/endgame/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	cea4b8e1fbfbfc9e
+1605	1645	6991103090908298	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	a5e6301b2a11f866
+1554	1605	6991103090498196	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	9d02544ef4747917
+1554	1605	6991103090498196	C:/Users/dimak/CLionProjects/endgame/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	9d02544ef4747917
+1605	1645	6991103090908298	C:/Users/dimak/CLionProjects/endgame/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	a5e6301b2a11f866
+1645	1699	6991103091458421	C:/Users/dimak/CLionProjects/endgame/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	e01c5fe24efd625b
+1645	1699	6991103091458421	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	e01c5fe24efd625b
+1645	1699	6991103091458421	C:/Users/dimak/CLionProjects/endgame/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete	e01c5fe24efd625b

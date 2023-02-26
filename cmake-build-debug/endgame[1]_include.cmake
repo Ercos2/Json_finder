@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/dimak/CLionProjects/endgame/cmake-build-debug/endgame[1]_tests.cmake")
+  include("C:/Users/dimak/CLionProjects/endgame/cmake-build-debug/endgame[1]_tests.cmake")
+else()
+  add_test(endgame_NOT_BUILT endgame_NOT_BUILT)
+endif()
