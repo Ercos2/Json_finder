@@ -27,8 +27,7 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
-target_link_libraries(endgame PRIVATE gtest_main)
-
+target_link_libraries(endgame PRIVATE gtest gtest_main )
 
 include(GoogleTest)
 gtest_discover_tests(endgame)

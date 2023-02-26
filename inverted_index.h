@@ -107,15 +107,7 @@ public:
             throw non_word();
         return freq_dictionary[word];
     }
-    /*
-    void output_map() {
-        for (auto it_req = freq_dictionary.begin(); it_req != freq_dictionary.end(); ++it_req) {
-            for (auto entry : it_req->second) {
-                cout << it_req->first << " " << entry.doc_id << " " << entry.count << "\n";
-            }
-        }
-    }
-    */
+
     map<std::string, vector<Entry>> get_dictionary() const {
         return freq_dictionary;
     }

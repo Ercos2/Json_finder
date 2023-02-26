@@ -1,28 +1,4 @@
 #include "projects_source.h"
-//*
-#include "gtest/gtest.h"
-
-TEST(sample_test_case, sample_test) {
-    EXPECT_EQ(1, 1);
-}
-//*/
-/*
-void output(vector<string> str_vec) {
-    for (auto str : str_vec) {
-        std::cout << str << "\n";
-    }
-}
-/*
-void output_vec_vec(vector<vector<RelativeIndex>> vec_vec) {
-    cout << "vec_vec size " << vec_vec.size() << "\n";
-    for(auto vec : vec_vec) {
-        cout << "vec size " << vec.size() << "\n";
-        for (auto rel : vec) {
-            cout << rel.doc_id << " " << rel.rank << "\n";
-        }
-    }
-}
- */
 
 int main() {
     vector<string> paths;
