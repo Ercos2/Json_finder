@@ -1,6 +1,7 @@
 Description:
 File search project
-The "config" file specifies the project name, version, the maximum number of output results, as well as files to search in the format:
+The "config" file specifies the project name, version, the maximum number of output results, as well as files to search in the format: 
+
 {
    "config": {
      "name": "endgame",
@@ -16,6 +17,7 @@ The "config" file specifies the project name, version, the maximum number of out
 }
 
 Search words are specified in the "request" file in the following format:
+
 {
    "requests": [
      "some words..",
@@ -29,6 +31,7 @@ Search words are specified in the "request" file in the following format:
 The parsed text must be in plain text format in the files specified in "config"
 
 After analysis, the results are recorded in the answers file in the following format:
+
 {
 "answers":[
 {"request0":
@@ -49,6 +52,7 @@ After analysis, the results are recorded in the answers file in the following fo
 {"request4":
 ["result","false"]}]
 }
+
 Where, "request" means the search word with a number corresponding to the ordinal in the "request" file. "result" displays the result of the search, where true means one or more results and false means none.
 After this item, the search result is displayed or, if there is more than one result, the "relevance" heading and the results following it.
 "docid" displays the sequence number of the result in the chain.
@@ -72,6 +76,7 @@ You need to download the project, fill in all the files (except "answers", of co
 Описание:
 Проект по поиску слов в файлах
 В файле "config" указываются название проекта, версия, максимальное количество выводимых результатов, а также файлы для поиска в формате: 
+
 {
   "config": {
     "name": "endgame",
@@ -87,6 +92,7 @@ You need to download the project, fill in all the files (except "answers", of co
 }
 
 Слова для поиска указываются в файле "request"  в формате:
+
 {
   "requests": [
     "some words..",
@@ -100,6 +106,7 @@ You need to download the project, fill in all the files (except "answers", of co
 Анализируемый текст должен находиться в обычном текстовом  формате в файлах, указанных в "config"
 
 После анализа, результаты заносятся в файл answers в формате:
+
 {
 "answers":[
 	{"request0":
@@ -120,6 +127,7 @@ You need to download the project, fill in all the files (except "answers", of co
 	{"request4":
 		["result","false"]}]
 }
+
 Где, "request" означае искомое слово с номером, соответственно порядковому в файле "request". "result" отображает итог поиска, где истина означает один и более результат, а ложь - ни одного.
 После этого пункта отображается результат поиска или, если результатов больше одного, заголовок "relevance" и следующие за ним результаты. 
 "docid" отображает порядковый номер результата в цепочке. 
