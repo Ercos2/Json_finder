@@ -4,6 +4,6 @@
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
-include("C:/Users/dimak/CLionProjects/endgame/cmake-build-debug/endgame[1]_include.cmake")
-subdirs("nlohmann_json")
+include("C:/Users/dimak/CLionProjects/endgame/cmake-build-debug/Test[1]_include.cmake")
+subdirs("test")
 subdirs("_deps/googletest-build")
