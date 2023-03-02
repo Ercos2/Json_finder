@@ -28,8 +28,10 @@ public:
     vector<string> get_vector(json json_array) {
         for(auto json_str : json_array) {
             ifstream json_stream(json_str);
-            if (!json_stream.is_open())
+            if (!json_stream.is_open()) {
                 cout << "File open error.\n";
+                paths.push_back(" ");
+            }
             else
                 paths.push_back(json_str);
             json_stream.close();
@@ -83,12 +85,12 @@ public:
         json json_pair;
         if (vec_result.size() > 1) {
             for (int a = 0; a < vec_result.size() && a < max_str; ++a) {
-                json_pair["relevance"].push_back({"docid", a});
+                json_pair["relevance"].push_back({"docid", vec_result[a].doc_id});
                 json_pair["relevance"].push_back({"rank", vec_result[a].rank});
             }
         }
         else {
-            json_pair.push_back({"docid", 0});
+            json_pair.push_back({"docid", vec_result[0].doc_id});
             json_pair.push_back({"rank", vec_result[0].rank});
         }
 

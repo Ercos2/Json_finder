@@ -7,9 +7,13 @@ mutex update_mute;
 
 void update(string str, string& modify_str, vector<bool>& end_vec) {
     ifstream file_stream(str);
-    while (!file_stream.eof()) {
-        getline(file_stream, str);
-        modify_str += " " + str;
+    if (!file_stream.is_open())
+        modify_str = "";
+    else {
+        while (!file_stream.eof()) {
+            getline(file_stream, str);
+            modify_str += " " + str;
+        }
     }
     file_stream.close();
     update_mute.lock();
@@ -26,6 +30,7 @@ public:
         vector<bool> end_vec;
         vector<thread> updates(input_docs.size());
         for (int a = 0; a < input_docs.size(); ++a) {
+            //if ()
             thread update1(update, input_docs[a], ref(vec_str[a]), ref(end_vec));
             swap(update1, updates[a]);
         }
@@ -73,6 +78,10 @@ public:
         get_words(vec_word, word);
         vector<string> words;
         for (auto doc : docs) {
+            if (doc == "") {
+                ++doc_num;
+                continue;
+            }
             get_words(words, doc);
             for (int a = 0; a < words.size(); ++a) {
                 for(auto temp_word : vec_word) {
