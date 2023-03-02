@@ -25,7 +25,7 @@ class InvertedIndex {
 public:
     InvertedIndex() = default;
 
-    void UpdateDocumentBase(vector<string> input_docs) {
+    void update_document_base(vector<string> input_docs) {
         vector<string> vec_str(input_docs.size());
         vector<bool> end_vec;
         vector<thread> updates(input_docs.size());
@@ -72,7 +72,7 @@ public:
         return str;
     }
 
-    vector<Entry> GetWordCount(const string& word) {
+    vector<Entry> get_word_count(const string& word) {
         int doc_num = 1;
         vector<string> vec_word;
         get_words(vec_word, word);

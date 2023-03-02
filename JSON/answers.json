@@ -4,13 +4,11 @@
 	{"request1":[
 		["result","true"],
 		{"relevance":[
-			["docid",4],["rank",1.0],
-			["docid",2],["rank",0.5]]}]},
+			["docid",4],["rank",1.0]]}]},
 	{"request2":[
 		["result","true"],
 		{"relevance":[
-			["docid",4],["rank",1.0],
-			["docid",2],["rank",0.75]]}]},
+			["docid",4],["rank",1.0]]}]},
 	{"request3":[
 		["result","true"],[
 		["docid",2],["rank",1.0]]]},

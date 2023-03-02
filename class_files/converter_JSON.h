@@ -38,7 +38,7 @@ public:
         }
         return paths;
     }
-    vector<string> GetTextDocuments() {
+    vector<string> get_text_documents() {
         paths.clear();
         json jfile;
         ifstream json_stream("..//JSON//config.json");
@@ -104,7 +104,7 @@ public:
 
     }
 
-    void putAnswers(vector<vector<RelativeIndex>>answers) {
+    void put_answers(vector<vector<RelativeIndex>>answers) {
         ofstream answers_stream("..//JSON//answers.json");
         json json_answers;
 

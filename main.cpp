@@ -24,19 +24,19 @@ int main() {
     catch (const non_request_key &x) {
         cout << x.what();
     }
-    paths = convert.GetTextDocuments();
+    paths = convert.get_text_documents();
     requests = convert.get_requests();
 
-    interted.UpdateDocumentBase(paths);
+    interted.update_document_base(paths);
     for (auto req : requests) {
-        try { interted.GetWordCount(req); }
+        try { interted.get_word_count(req); }
         catch (const non_word &x) { cout << x.what(); }
     }
     SearchServer search(interted);
 
     vector<vector<RelativeIndex>> search_result = search.search(requests);
 
-    convert.putAnswers(search_result);
+    convert.put_answers(search_result);
 
     return 0;
 }
