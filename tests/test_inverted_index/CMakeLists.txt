@@ -9,7 +9,7 @@ set (MY_SOURCE_DIR ${CMAKE_SOURCE_DIR}/source_files)
 set (MY_CLASS_DIR ${CMAKE_SOURCE_DIR}/class_files)
 target_include_directories(${PROJECT_NAME} PUBLIC ${MY_CLASS_DIR} ${MY_SOURCE_DIR})
 
-enable_testing()
+#enable_testing()
 
 target_link_libraries(${PROJECT_NAME} PUBLIC nlohmann_json::nlohmann_json gtest gtest_main)
 

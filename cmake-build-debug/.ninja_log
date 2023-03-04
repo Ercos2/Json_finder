@@ -1,11 +1,11 @@
 # ninja log v5
 28	4060	6996573434071340	tests/test_inverted_index/CMakeFiles/test_inverted_index.dir/test_inverted_index.cpp.obj	fd397919c8a41c65
-4108	6588	6996573459407078	C:/Users/dimak/CLionProjects/endgame/cmake-build-debug/tests/test_search_server/test_search_server[1]_tests.cmake	df21a11cc9a3f7e3
+3506	5744	6996578978381688	C:/Users/dimak/CLionProjects/endgame/cmake-build-debug/tests/test_search_server/test_search_server[1]_tests.cmake	df21a11cc9a3f7e3
 25	2242	6996509817093184	_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj	ad648ac65b1b5eaa
 10	101	6996508658073299	tests/test_convert_JSON/CMakeFiles/test_convert_JSON.dir/test_convert_JSON.cpp.obj	8de93a93108dd728
 38	1812	6996509812792212	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	8bc7f60e8faa9cce
 19	3262	6996509827269981	_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj	d38b3d2680a11a35
-21	4108	6996573434561455	tests/test_search_server/CMakeFiles/test_search_server.dir/test_search_server.cpp.obj	8d8f855e8c42ef8f
+7	3506	6996578955976710	tests/test_search_server/CMakeFiles/test_search_server.dir/test_search_server.cpp.obj	8d8f855e8c42ef8f
 8172	8446	6996509879149433	lib/libgmockd.a	4ffc92d9acdafe1c
 13	5079	6996573444233646	CMakeFiles/endgame.dir/main.cpp.obj	f06e61b5cad744af
 5079	6656	6996573460057237	endgame.exe	2f6bb275aca9663e
@@ -19,18 +19,6 @@
 4060	6464	6996573458156802	tests/test_inverted_index/test_inverted_index.exe	a668787873837df7
 4060	6464	6996573458156802	tests/test_inverted_index/test_inverted_index[1]_tests.cmake	a668787873837df7
 4060	6464	6996573458156802	C:/Users/dimak/CLionProjects/endgame/cmake-build-debug/tests/test_inverted_index/test_inverted_index[1]_tests.cmake	a668787873837df7
-4108	6588	6996573459407078	tests/test_search_server/test_search_server.exe	df21a11cc9a3f7e3
-4108	6588	6996573459407078	tests/test_search_server/test_search_server[1]_tests.cmake	df21a11cc9a3f7e3
-6	27539	6996578403717830	build.ninja	d5978ef8506d4a36
-7	3491	6996578439714462	tests/test_search_server/CMakeFiles/test_search_server.dir/test_search_server.cpp.obj	8d8f855e8c42ef8f
-3492	5742	6996578462259570	tests/test_search_server/test_search_server.exe	df21a11cc9a3f7e3
-3492	5742	6996578462259570	tests/test_search_server/test_search_server[1]_tests.cmake	df21a11cc9a3f7e3
-3492	5742	6996578462259570	C:/Users/dimak/CLionProjects/endgame/cmake-build-debug/tests/test_search_server/test_search_server[1]_tests.cmake	df21a11cc9a3f7e3
-7	3507	6996578731956602	tests/test_search_server/CMakeFiles/test_search_server.dir/test_search_server.cpp.obj	8d8f855e8c42ef8f
-3507	5752	6996578754463862	tests/test_search_server/test_search_server.exe	df21a11cc9a3f7e3
-3507	5752	6996578754463862	tests/test_search_server/test_search_server[1]_tests.cmake	df21a11cc9a3f7e3
-3507	5752	6996578754463862	C:/Users/dimak/CLionProjects/endgame/cmake-build-debug/tests/test_search_server/test_search_server[1]_tests.cmake	df21a11cc9a3f7e3
-7	3506	6996578955976710	tests/test_search_server/CMakeFiles/test_search_server.dir/test_search_server.cpp.obj	8d8f855e8c42ef8f
+6	27539	6996581219347253	build.ninja	d5978ef8506d4a36
 3506	5744	6996578978381688	tests/test_search_server/test_search_server.exe	df21a11cc9a3f7e3
 3506	5744	6996578978381688	tests/test_search_server/test_search_server[1]_tests.cmake	df21a11cc9a3f7e3
-3506	5744	6996578978381688	C:/Users/dimak/CLionProjects/endgame/cmake-build-debug/tests/test_search_server/test_search_server[1]_tests.cmake	df21a11cc9a3f7e3

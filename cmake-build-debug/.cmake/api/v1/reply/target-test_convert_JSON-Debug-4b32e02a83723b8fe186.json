@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "tests/test_search_server/test_search_server.exe"
+			"path" : "tests/test_convert_JSON/test_convert_JSON.exe"
 		},
 		{
-			"path" : "tests/test_search_server/test_search_server.pdb"
+			"path" : "tests/test_convert_JSON/test_convert_JSON.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -19,7 +19,7 @@
 		],
 		"files" : 
 		[
-			"tests/test_search_server/CMakeLists.txt"
+			"tests/test_convert_JSON/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -102,14 +102,14 @@
 	[
 		{
 			"backtrace" : 2,
-			"id" : "gtest_main::@1ea2dfc0605fe3ab2a3f"
+			"id" : "gtest::@1ea2dfc0605fe3ab2a3f"
 		},
 		{
 			"backtrace" : 2,
-			"id" : "gtest::@1ea2dfc0605fe3ab2a3f"
+			"id" : "gtest_main::@1ea2dfc0605fe3ab2a3f"
 		}
 	],
-	"id" : "test_search_server::@f85d429eda7aacb6f706",
+	"id" : "test_convert_JSON::@e3385cdcb3b9ce1a4663",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -144,12 +144,12 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "test_search_server",
-	"nameOnDisk" : "test_search_server.exe",
+	"name" : "test_convert_JSON",
+	"nameOnDisk" : "test_convert_JSON.exe",
 	"paths" : 
 	{
-		"build" : "tests/test_search_server",
-		"source" : "tests/test_search_server"
+		"build" : "tests/test_convert_JSON",
+		"source" : "tests/test_convert_JSON"
 	},
 	"sourceGroups" : 
 	[
@@ -166,7 +166,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "tests/test_search_server/test_search_server.cpp",
+			"path" : "tests/test_convert_JSON/test_convert_JSON.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

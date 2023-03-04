@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "tests/test_convert_JSON/test_convert_JSON.exe"
+			"path" : "tests/test_inverted_index/test_inverted_index.exe"
 		},
 		{
-			"path" : "tests/test_convert_JSON/test_convert_JSON.pdb"
+			"path" : "tests/test_inverted_index/test_inverted_index.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -19,7 +19,7 @@
 		],
 		"files" : 
 		[
-			"tests/test_convert_JSON/CMakeLists.txt"
+			"tests/test_inverted_index/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -29,19 +29,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 4,
+				"line" : 5,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 13,
+				"line" : 14,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 9,
+				"line" : 10,
 				"parent" : 0
 			}
 		]
@@ -102,14 +102,14 @@
 	[
 		{
 			"backtrace" : 2,
-			"id" : "gtest_main::@1ea2dfc0605fe3ab2a3f"
+			"id" : "gtest::@1ea2dfc0605fe3ab2a3f"
 		},
 		{
 			"backtrace" : 2,
-			"id" : "gtest::@1ea2dfc0605fe3ab2a3f"
+			"id" : "gtest_main::@1ea2dfc0605fe3ab2a3f"
 		}
 	],
-	"id" : "test_convert_JSON::@e3385cdcb3b9ce1a4663",
+	"id" : "test_inverted_index::@346322039111f145f1c3",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -144,12 +144,12 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "test_convert_JSON",
-	"nameOnDisk" : "test_convert_JSON.exe",
+	"name" : "test_inverted_index",
+	"nameOnDisk" : "test_inverted_index.exe",
 	"paths" : 
 	{
-		"build" : "tests/test_convert_JSON",
-		"source" : "tests/test_convert_JSON"
+		"build" : "tests/test_inverted_index",
+		"source" : "tests/test_inverted_index"
 	},
 	"sourceGroups" : 
 	[
@@ -166,7 +166,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "tests/test_convert_JSON/test_convert_JSON.cpp",
+			"path" : "tests/test_inverted_index/test_inverted_index.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
