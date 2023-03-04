@@ -84,7 +84,6 @@ namespace testing {
 #endif
 
 
-
 // Declares the flags.
 
 // This flag temporary enables the disabled tests.

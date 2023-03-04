@@ -120,6 +120,9 @@ public:
         return freq_dictionary;
     }
 
+    void set_docs(vector<string> new_docs) {
+        docs = new_docs;
+    }
 private:
     vector<string> docs;
     map<std::string, vector<Entry>> freq_dictionary;

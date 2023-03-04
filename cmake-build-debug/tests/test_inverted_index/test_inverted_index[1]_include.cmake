@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/dimak/CLionProjects/endgame/cmake-build-debug/tests/test_inverted_index/test_inverted_index[1]_tests.cmake")
+  include("C:/Users/dimak/CLionProjects/endgame/cmake-build-debug/tests/test_inverted_index/test_inverted_index[1]_tests.cmake")
+else()
+  add_test(test_inverted_index_NOT_BUILT test_inverted_index_NOT_BUILT)
+endif()
