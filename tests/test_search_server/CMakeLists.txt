@@ -4,9 +4,11 @@ project(test_search_server)
 add_executable(${PROJECT_NAME} test_search_server.cpp)
 set(CMAKE_CXX_STANDARD 20)
 
-set (MY_SOURCE_DIR ${CMAKE_SOURCE_DIR}/source_files)
-set (MY_CLASS_DIR ${CMAKE_SOURCE_DIR}/class_files)
-target_include_directories(${PROJECT_NAME} PUBLIC ${MY_CLASS_DIR} ${MY_SOURCE_DIR})
+set (MY_SOURCE_DIR ${CMAKE_SOURCE_DIR}/source)
+set (MY_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/include)
+set (MY_SOURCE_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/source/include)
+#target_include_directories(${PROJECT_NAME} PUBLIC ${MY_INCLUDE_DIR} ${MY_SOURCE_DIR})
+target_include_directories(${PROJECT_NAME} PUBLIC ${MY_INCLUDE_DIR} ${MY_SOURCE_DIR} ${MY_SOURCE_INCLUDE_DIR})
 
 #enable_testing()
 

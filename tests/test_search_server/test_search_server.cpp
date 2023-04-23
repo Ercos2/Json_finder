@@ -1,11 +1,14 @@
 #include <gtest/gtest.h>
-#include "../source_files/projects_source.h"
+
+#include "projects_source.h"
+#include "inverted_index.h"
+#include "search_server.h"
 
 using namespace std;
 #include <iostream>
 
 void output_entry_vec(vector<Entry> word_count) {
-    for (auto word : word_count) {
+    for (const auto& word : word_count) {
         cout << word.doc_id << " " << word.count << "\n";
     }
     cout << "//////////////////////////////\n";
@@ -13,9 +16,9 @@ void output_entry_vec(vector<Entry> word_count) {
 
 void output_vec_vec(vector<vector<RelativeIndex>> vec_vec) {
     cout << "vec_vec size " << vec_vec.size() << "\n";
-    for(auto vec : vec_vec) {
+    for(const auto& vec : vec_vec) {
         cout << "vec size " << vec.size() << "\n";
-        for (auto rel : vec) {
+        for (const auto& rel : vec) {
             cout << "{" << rel.doc_id << ", " << rel.rank << "},\n";
         }
     }

@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/dimak/CLionProjects/endgame/tests
+# Install script for directory: C:/Users/dimak/Desktop/CLionProjects/endgame/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,16 +39,16 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/dimak/CLionProjects/endgame/cmake-build-debug/tests/test_convert_JSON/cmake_install.cmake")
+  include("C:/Users/dimak/Desktop/CLionProjects/endgame/cmake-build-debug/tests/test_convert_JSON/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/dimak/CLionProjects/endgame/cmake-build-debug/tests/test_inverted_index/cmake_install.cmake")
+  include("C:/Users/dimak/Desktop/CLionProjects/endgame/cmake-build-debug/tests/test_inverted_index/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/dimak/CLionProjects/endgame/cmake-build-debug/tests/test_search_server/cmake_install.cmake")
+  include("C:/Users/dimak/Desktop/CLionProjects/endgame/cmake-build-debug/tests/test_search_server/cmake_install.cmake")
 endif()
 

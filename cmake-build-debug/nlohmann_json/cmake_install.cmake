@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/dimak/CLionProjects/endgame/nlohmann_json
+# Install script for directory: C:/Users/dimak/Desktop/CLionProjects/endgame/nlohmann_json
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

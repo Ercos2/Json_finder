@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
-
-#include "../source_files/projects_source.h"
-//#include "../class_files/converter_JSON.h"
+#include "projects_source.h"
+#include "search_server.h"
+#include "inverted_index.h"
 
 using namespace std;
 #include <iostream>

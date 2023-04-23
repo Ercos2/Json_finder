@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/dimak/CLionProjects/endgame/tests/test_inverted_index
+# Install script for directory: C:/Users/dimak/Desktop/CLionProjects/endgame/tests/test_inverted_index
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

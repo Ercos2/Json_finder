@@ -1,4 +1,6 @@
-#include "projects_source.h"
+#include "inverted_index.h"
+#include "search_server.h"
+#include "converter_JSON.h"
 
 int main() {
     vector<string> paths;
@@ -28,7 +30,7 @@ int main() {
     requests = convert.get_requests();
 
     interted.update_document_base(paths);
-    for (auto req : requests) {
+    for (const auto& req : requests) {
         try { interted.get_word_count(req); }
         catch (const non_word &x) { cout << x.what(); }
     }

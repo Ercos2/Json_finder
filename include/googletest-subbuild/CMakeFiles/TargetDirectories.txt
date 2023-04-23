@@ -1,0 +1,3 @@
+C:/Users/dimak/Desktop/CLionProjects/endgame/include/googletest-subbuild/CMakeFiles/googletest-populate.dir
+C:/Users/dimak/Desktop/CLionProjects/endgame/include/googletest-subbuild/CMakeFiles/edit_cache.dir
+C:/Users/dimak/Desktop/CLionProjects/endgame/include/googletest-subbuild/CMakeFiles/rebuild_cache.dir

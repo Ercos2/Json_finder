@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/dimak/CLionProjects/endgame/tests/test_convert_JSON
+# Install script for directory: C:/Users/dimak/Desktop/CLionProjects/endgame/tests/test_convert_JSON
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

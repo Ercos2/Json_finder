@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/dimak/CLionProjects/endgame/tests/test_search_server
+# Install script for directory: C:/Users/dimak/Desktop/CLionProjects/endgame/tests/test_search_server
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
