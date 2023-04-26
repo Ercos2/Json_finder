@@ -70,6 +70,7 @@ vector<Entry> InvertedIndex::get_word_count(const string& word) {
     vector<string> vec_word;
     get_words(vec_word, word);
     vector<string> words;
+
     for (const auto& doc : docs) {
         if (doc == "") {
             ++doc_num;

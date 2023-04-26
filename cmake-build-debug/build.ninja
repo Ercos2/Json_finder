@@ -474,6 +474,13 @@ build tests/test_inverted_index/CMakeFiles/test_inverted_index.dir/test_inverted
   OBJECT_DIR = tests\test_inverted_index\CMakeFiles\test_inverted_index.dir
   OBJECT_FILE_DIR = tests\test_inverted_index\CMakeFiles\test_inverted_index.dir
 
+build tests/test_inverted_index/CMakeFiles/test_inverted_index.dir/__/__/source/inverted_index.cpp.obj: CXX_COMPILER__test_inverted_index_Debug C$:/Users/dimak/Desktop/CLionProjects/endgame/source/inverted_index.cpp || cmake_object_order_depends_target_test_inverted_index
+  DEP_FILE = tests\test_inverted_index\CMakeFiles\test_inverted_index.dir\__\__\source\inverted_index.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++20
+  INCLUDES = -IC:/Users/dimak/Desktop/CLionProjects/endgame/include -IC:/Users/dimak/Desktop/CLionProjects/endgame/source -IC:/Users/dimak/Desktop/CLionProjects/endgame/source/include -IC:/Users/dimak/Desktop/CLionProjects/endgame/nlohmann_json/include -isystem C:/Users/dimak/Desktop/CLionProjects/endgame/cmake-build-debug/_deps/googletest-src/googletest/include -isystem C:/Users/dimak/Desktop/CLionProjects/endgame/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = tests\test_inverted_index\CMakeFiles\test_inverted_index.dir
+  OBJECT_FILE_DIR = tests\test_inverted_index\CMakeFiles\test_inverted_index.dir\__\__\source
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target test_inverted_index
@@ -482,9 +489,9 @@ build tests/test_inverted_index/CMakeFiles/test_inverted_index.dir/test_inverted
 #############################################
 # Link the executable tests\test_inverted_index\test_inverted_index.exe
 
-build tests/test_inverted_index/test_inverted_index.exe tests/test_inverted_index/test_inverted_index[1]_tests.cmake | ${cmake_ninja_workdir}tests/test_inverted_index/test_inverted_index[1]_tests.cmake: CXX_EXECUTABLE_LINKER__test_inverted_index_Debug tests/test_inverted_index/CMakeFiles/test_inverted_index.dir/test_inverted_index.cpp.obj | lib/libgtestd.a lib/libgtest_maind.a lib/libgtestd.a || lib/libgtest_maind.a lib/libgtestd.a
+build tests/test_inverted_index/test_inverted_index.exe tests/test_inverted_index/test_inverted_index[1]_tests.cmake | ${cmake_ninja_workdir}tests/test_inverted_index/test_inverted_index[1]_tests.cmake: CXX_EXECUTABLE_LINKER__test_inverted_index_Debug tests/test_inverted_index/CMakeFiles/test_inverted_index.dir/test_inverted_index.cpp.obj tests/test_inverted_index/CMakeFiles/test_inverted_index.dir/__/__/source/inverted_index.cpp.obj | lib/libgtestd.a lib/libgtest_maind.a lib/libgtestd.a || lib/libgtest_maind.a lib/libgtestd.a
   FLAGS = -g
-  LINK_LIBRARIES = -linvert  lib/libgtestd.a  lib/libgtest_maind.a  lib/libgtestd.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = lib/libgtestd.a  lib/libgtest_maind.a  lib/libgtestd.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = tests\test_inverted_index\CMakeFiles\test_inverted_index.dir
   POST_BUILD = cmd.exe /C "cd /D C:\Users\dimak\Desktop\CLionProjects\endgame\cmake-build-debug\tests\test_inverted_index && "C:\Program Files\JetBrains\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" -D TEST_TARGET=test_inverted_index -D TEST_EXECUTABLE=C:/Users/dimak/Desktop/CLionProjects/endgame/cmake-build-debug/tests/test_inverted_index/test_inverted_index.exe -D TEST_EXECUTOR= -D TEST_WORKING_DIR=C:/Users/dimak/Desktop/CLionProjects/endgame/cmake-build-debug/tests/test_inverted_index -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=test_inverted_index_TESTS -D CTEST_FILE=C:/Users/dimak/Desktop/CLionProjects/endgame/cmake-build-debug/tests/test_inverted_index/test_inverted_index[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_XML_OUTPUT_DIR= -P "C:/Program Files/JetBrains/CLion 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/GoogleTestAddTests.cmake""
   PRE_LINK = cd .
@@ -591,6 +598,20 @@ build tests/test_search_server/CMakeFiles/test_search_server.dir/test_search_ser
   OBJECT_DIR = tests\test_search_server\CMakeFiles\test_search_server.dir
   OBJECT_FILE_DIR = tests\test_search_server\CMakeFiles\test_search_server.dir
 
+build tests/test_search_server/CMakeFiles/test_search_server.dir/__/__/source/inverted_index.cpp.obj: CXX_COMPILER__test_search_server_Debug C$:/Users/dimak/Desktop/CLionProjects/endgame/source/inverted_index.cpp || cmake_object_order_depends_target_test_search_server
+  DEP_FILE = tests\test_search_server\CMakeFiles\test_search_server.dir\__\__\source\inverted_index.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++20
+  INCLUDES = -IC:/Users/dimak/Desktop/CLionProjects/endgame/include -IC:/Users/dimak/Desktop/CLionProjects/endgame/source -IC:/Users/dimak/Desktop/CLionProjects/endgame/source/include -IC:/Users/dimak/Desktop/CLionProjects/endgame/nlohmann_json/include -isystem C:/Users/dimak/Desktop/CLionProjects/endgame/cmake-build-debug/_deps/googletest-src/googletest/include -isystem C:/Users/dimak/Desktop/CLionProjects/endgame/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = tests\test_search_server\CMakeFiles\test_search_server.dir
+  OBJECT_FILE_DIR = tests\test_search_server\CMakeFiles\test_search_server.dir\__\__\source
+
+build tests/test_search_server/CMakeFiles/test_search_server.dir/__/__/source/search_server.cpp.obj: CXX_COMPILER__test_search_server_Debug C$:/Users/dimak/Desktop/CLionProjects/endgame/source/search_server.cpp || cmake_object_order_depends_target_test_search_server
+  DEP_FILE = tests\test_search_server\CMakeFiles\test_search_server.dir\__\__\source\search_server.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++20
+  INCLUDES = -IC:/Users/dimak/Desktop/CLionProjects/endgame/include -IC:/Users/dimak/Desktop/CLionProjects/endgame/source -IC:/Users/dimak/Desktop/CLionProjects/endgame/source/include -IC:/Users/dimak/Desktop/CLionProjects/endgame/nlohmann_json/include -isystem C:/Users/dimak/Desktop/CLionProjects/endgame/cmake-build-debug/_deps/googletest-src/googletest/include -isystem C:/Users/dimak/Desktop/CLionProjects/endgame/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = tests\test_search_server\CMakeFiles\test_search_server.dir
+  OBJECT_FILE_DIR = tests\test_search_server\CMakeFiles\test_search_server.dir\__\__\source
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target test_search_server
@@ -599,7 +620,7 @@ build tests/test_search_server/CMakeFiles/test_search_server.dir/test_search_ser
 #############################################
 # Link the executable tests\test_search_server\test_search_server.exe
 
-build tests/test_search_server/test_search_server.exe tests/test_search_server/test_search_server[1]_tests.cmake | ${cmake_ninja_workdir}tests/test_search_server/test_search_server[1]_tests.cmake: CXX_EXECUTABLE_LINKER__test_search_server_Debug tests/test_search_server/CMakeFiles/test_search_server.dir/test_search_server.cpp.obj | lib/libgtestd.a lib/libgtest_maind.a lib/libgtestd.a || lib/libgtest_maind.a lib/libgtestd.a
+build tests/test_search_server/test_search_server.exe tests/test_search_server/test_search_server[1]_tests.cmake | ${cmake_ninja_workdir}tests/test_search_server/test_search_server[1]_tests.cmake: CXX_EXECUTABLE_LINKER__test_search_server_Debug tests/test_search_server/CMakeFiles/test_search_server.dir/test_search_server.cpp.obj tests/test_search_server/CMakeFiles/test_search_server.dir/__/__/source/inverted_index.cpp.obj tests/test_search_server/CMakeFiles/test_search_server.dir/__/__/source/search_server.cpp.obj | lib/libgtestd.a lib/libgtest_maind.a lib/libgtestd.a || lib/libgtest_maind.a lib/libgtestd.a
   FLAGS = -g
   LINK_LIBRARIES = lib/libgtestd.a  lib/libgtest_maind.a  lib/libgtestd.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = tests\test_search_server\CMakeFiles\test_search_server.dir

@@ -5,12 +5,14 @@ SearchServer::SearchServer(InvertedIndex& idx) : index(idx) { }
 vector<vector<RelativeIndex>> SearchServer::search(const vector<string>& queries_input) {
     bool iter_flag = false;
     vector<vector<RelativeIndex>> relative_vec_vec;
+    //*
     for (const auto& queri : queries_input) {
         vector<string> words;
         vector<RelativeIndex> relative_vec;
         if (index.get_dictionary().contains(queri)) {
-            for (const auto& dictionary : index.get_dictionary()[queri]) {
-                RelativeIndex new_relative(dictionary.doc_id,dictionary.count);
+            for (int a = 0; a < index.get_dictionary()[queri].size(); ++a) {
+                RelativeIndex new_relative(index.get_dictionary()[queri][a].doc_id,
+                                           index.get_dictionary()[queri][a].count);
                 relative_vec.push_back(new_relative);
             }
             relative_vec_vec.push_back(relative_vec);
