@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "C:/Users/dimak/Desktop/CLionProjects/endgame/include/googletest-build",
+		"source" : "include/googletest-src"
+	}
+}

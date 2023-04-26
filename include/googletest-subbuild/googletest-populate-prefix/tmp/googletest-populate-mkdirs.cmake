@@ -4,8 +4,8 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "C:/Users/dimak/Desktop/CLionProjects/endgame/cmake-build-debug/_deps/googletest-src"
-  "C:/Users/dimak/Desktop/CLionProjects/endgame/cmake-build-debug/_deps/googletest-build"
+  "C:/Users/dimak/Desktop/CLionProjects/endgame/include/googletest-src"
+  "C:/Users/dimak/Desktop/CLionProjects/endgame/include/googletest-build"
   "C:/Users/dimak/Desktop/CLionProjects/endgame/include/googletest-subbuild/googletest-populate-prefix"
   "C:/Users/dimak/Desktop/CLionProjects/endgame/include/googletest-subbuild/googletest-populate-prefix/tmp"
   "C:/Users/dimak/Desktop/CLionProjects/endgame/include/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp"

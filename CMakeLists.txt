@@ -11,7 +11,6 @@ set (MY_SOURCE_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/source/include)
 
 add_subdirectory(nlohmann_json)
 add_subdirectory(tests)
-#add_subdirectory(class_files)
 
 add_executable(endgame main.cpp
         ${MY_INCLUDE_DIR}/projects_source.h

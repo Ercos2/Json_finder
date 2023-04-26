@@ -6,4 +6,4 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("nlohmann_json")
 subdirs("tests")
-subdirs("_deps/googletest-build")
+subdirs("C:/Users/dimak/Desktop/CLionProjects/endgame/include/googletest-build")

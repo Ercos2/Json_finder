@@ -170,7 +170,7 @@ CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 CMAKE_LINKER:FILEPATH=C:/Program Files/JetBrains/CLion 2022.3.1/bin/mingw/bin/ld.exe
 
 //make program
-CMAKE_MAKE_PROGRAM:FILEPATH=C:/Program Files/JetBrains/CLion 2022.3.1/bin/ninja/win/ninja.exe
+CMAKE_MAKE_PROGRAM:FILEPATH=C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/ninja/win/ninja.exe
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -366,7 +366,7 @@ endgame_IS_TOP_LEVEL:STATIC=ON
 endgame_SOURCE_DIR:STATIC=C:/Users/dimak/Desktop/CLionProjects/endgame
 
 //Value Computed by CMake
-gmock_BINARY_DIR:STATIC=C:/Users/dimak/Desktop/CLionProjects/endgame/cmake-build-debug/_deps/googletest-build/googlemock
+gmock_BINARY_DIR:STATIC=C:/Users/dimak/Desktop/CLionProjects/endgame/include/googletest-build/googlemock
 
 //Value Computed by CMake
 gmock_IS_TOP_LEVEL:STATIC=OFF
@@ -375,7 +375,7 @@ gmock_IS_TOP_LEVEL:STATIC=OFF
 gmock_LIB_DEPENDS:STATIC=general;gtest;
 
 //Value Computed by CMake
-gmock_SOURCE_DIR:STATIC=C:/Users/dimak/Desktop/CLionProjects/endgame/cmake-build-debug/_deps/googletest-src/googlemock
+gmock_SOURCE_DIR:STATIC=C:/Users/dimak/Desktop/CLionProjects/endgame/include/googletest-src/googlemock
 
 //Build all of Google Mock's own tests.
 gmock_build_tests:BOOL=OFF
@@ -384,22 +384,22 @@ gmock_build_tests:BOOL=OFF
 gmock_main_LIB_DEPENDS:STATIC=general;gmock;
 
 //Value Computed by CMake
-googletest-distribution_BINARY_DIR:STATIC=C:/Users/dimak/Desktop/CLionProjects/endgame/cmake-build-debug/_deps/googletest-build
+googletest-distribution_BINARY_DIR:STATIC=C:/Users/dimak/Desktop/CLionProjects/endgame/include/googletest-build
 
 //Value Computed by CMake
 googletest-distribution_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-googletest-distribution_SOURCE_DIR:STATIC=C:/Users/dimak/Desktop/CLionProjects/endgame/cmake-build-debug/_deps/googletest-src
+googletest-distribution_SOURCE_DIR:STATIC=C:/Users/dimak/Desktop/CLionProjects/endgame/include/googletest-src
 
 //Value Computed by CMake
-gtest_BINARY_DIR:STATIC=C:/Users/dimak/Desktop/CLionProjects/endgame/cmake-build-debug/_deps/googletest-build/googletest
+gtest_BINARY_DIR:STATIC=C:/Users/dimak/Desktop/CLionProjects/endgame/include/googletest-build/googletest
 
 //Value Computed by CMake
 gtest_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-gtest_SOURCE_DIR:STATIC=C:/Users/dimak/Desktop/CLionProjects/endgame/cmake-build-debug/_deps/googletest-src/googletest
+gtest_SOURCE_DIR:STATIC=C:/Users/dimak/Desktop/CLionProjects/endgame/include/googletest-src/googletest
 
 //Build gtest's sample programs.
 gtest_build_samples:BOOL=OFF
@@ -654,7 +654,7 @@ _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files (x86)/endgame
 //Path to a program.
 _Python_EXECUTABLE:INTERNAL=_Python_EXECUTABLE-NOTFOUND
-generated_dir:INTERNAL=C:/Users/dimak/Desktop/CLionProjects/endgame/cmake-build-debug/_deps/googletest-build/googletest/generated
+generated_dir:INTERNAL=C:/Users/dimak/Desktop/CLionProjects/endgame/include/googletest-build/googletest/generated
 //ADVANCED property for variable: gmock_build_tests
 gmock_build_tests-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: gtest_build_samples
