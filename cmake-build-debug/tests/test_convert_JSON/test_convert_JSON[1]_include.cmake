@@ -1,5 +1,0 @@
-if(EXISTS "C:/Users/dimak/Desktop/CLionProjects/endgame/cmake-build-debug/tests/test_convert_JSON/test_convert_JSON[1]_tests.cmake")
-  include("C:/Users/dimak/Desktop/CLionProjects/endgame/cmake-build-debug/tests/test_convert_JSON/test_convert_JSON[1]_tests.cmake")
-else()
-  add_test(test_convert_JSON_NOT_BUILT test_convert_JSON_NOT_BUILT)
-endif()
