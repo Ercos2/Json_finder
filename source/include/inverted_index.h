@@ -2,26 +2,26 @@
 
 #include "projects_source.h"
 
-static mutex update_mute;
+static std::mutex update_mute;
 
-void update(string str, string& modify_str, vector<bool>& end_vec);
+void update(std::string str, std::string& modify_str, std::vector<bool>& end_vec);
 
 class InvertedIndex {
 public:
     InvertedIndex();
 
-    void update_document_base(vector<string> input_docs);
+    void update_document_base(std::vector<std::string> input_docs);
 
-    void get_words(vector<string>& words, const string &str);
+    void get_words(std::vector<std::string>& words, const std::string &str);
 
-    string construct_str(vector<string> vec);
+    std::string construct_str(std::vector<std::string> vec);
 
-    vector<Entry> get_word_count(const string& word);
+    std::vector<Entry> get_word_count(const std::string& word);
 
-    map<std::string, vector<Entry>> get_dictionary() const;
+    std::map<std::string, std::vector<Entry>> get_dictionary() const;
 
-    void set_docs(vector<string> new_docs);
+    void set_docs(std::vector<std::string> new_docs);
 private:
-    vector<string> docs;
-    map<std::string, vector<Entry>> freq_dictionary;
+    std::vector<std::string> docs;
+    std::map<std::string, std::vector<Entry>> freq_dictionary;
 };

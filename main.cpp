@@ -3,8 +3,8 @@
 #include "converter_JSON.h"
 
 int main() {
-    vector<string> paths;
-    vector<string> requests;
+    std::vector<std::string> paths;
+    std::vector<std::string> requests;
     Converter_JSON convert;
     InvertedIndex interted;
 
@@ -13,18 +13,18 @@ int main() {
         convert.correct_request();
     }
     catch (const non_config &x) {
-        cout << x.what();
+        std::cout << x.what();
         return 1;
     }
     catch (const non_config_key &x) {
-        cout << x.what();
+        std::cout << x.what();
         return 1;
     }
     catch (const non_request &x) {
-        cout << x.what();
+        std::cout << x.what();
     }
     catch (const non_request_key &x) {
-        cout << x.what();
+        std::cout << x.what();
     }
     paths = convert.get_text_documents();
     requests = convert.get_requests();
@@ -32,11 +32,11 @@ int main() {
     interted.update_document_base(paths);
     for (const auto& req : requests) {
         try { interted.get_word_count(req); }
-        catch (const non_word &x) { cout << x.what(); }
+        catch (const non_word &x) { std::cout << x.what(); }
     }
     SearchServer search(interted);
 
-    vector<vector<RelativeIndex>> search_result = search.search(requests);
+    std::vector<std::vector<RelativeIndex>> search_result = search.search(requests);
 
     convert.put_answers(search_result);
 

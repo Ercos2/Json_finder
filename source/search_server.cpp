@@ -2,13 +2,13 @@
 
 SearchServer::SearchServer(InvertedIndex& idx) : index(idx) { }
 
-vector<vector<RelativeIndex>> SearchServer::search(const vector<string>& queries_input) {
+std::vector<std::vector<RelativeIndex>> SearchServer::search(const std::vector<std::string>& queries_input) {
     bool iter_flag = false;
-    vector<vector<RelativeIndex>> relative_vec_vec;
+    std::vector<std::vector<RelativeIndex>> relative_vec_vec;
     //*
     for (const auto& queri : queries_input) {
-        vector<string> words;
-        vector<RelativeIndex> relative_vec;
+        std::vector<std::string> words;
+        std::vector<RelativeIndex> relative_vec;
         if (index.get_dictionary().contains(queri)) {
             for (int a = 0; a < index.get_dictionary()[queri].size(); ++a) {
                 RelativeIndex new_relative(index.get_dictionary()[queri][a].doc_id,

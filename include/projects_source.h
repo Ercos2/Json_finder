@@ -6,9 +6,10 @@
 #include <thread>
 #include <mutex>
 #include <nlohmann/json.hpp>
+//#include "nlohmann/json.hpp"
 
 using json = nlohmann::json;
-using namespace std;
+//using namespace std;
 
 struct RelativeIndex{
     size_t doc_id;

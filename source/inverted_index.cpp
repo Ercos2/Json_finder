@@ -1,7 +1,7 @@
 #include "inverted_index.h"
 
-void update(string str, string& modify_str, vector<bool>& end_vec) {
-    ifstream file_stream(str);
+void update(std::string str, std::string& modify_str, std::vector<bool>& end_vec) {
+    std::ifstream file_stream(str);
     if (!file_stream.is_open())
         modify_str = "";
     else {
@@ -18,13 +18,13 @@ void update(string str, string& modify_str, vector<bool>& end_vec) {
 
 InvertedIndex::InvertedIndex() = default;
 
-void InvertedIndex::update_document_base(vector<string> input_docs) {
-    vector<string> vec_str(input_docs.size());
-    vector<bool> end_vec;
-    vector<thread> updates(input_docs.size());
+void InvertedIndex::update_document_base(std::vector<std::string> input_docs) {
+    std::vector<std::string> vec_str(input_docs.size());
+    std::vector<bool> end_vec;
+    std::vector<std::thread> updates(input_docs.size());
     for (int a = 0; a < input_docs.size(); ++a) {
         //if ()
-        thread update1(update, input_docs[a], ref(vec_str[a]), ref(end_vec));
+        std::thread update1(update, input_docs[a], ref(vec_str[a]), ref(end_vec));
         swap(update1, updates[a]);
     }
     while (true) {
@@ -41,9 +41,9 @@ void InvertedIndex::update_document_base(vector<string> input_docs) {
     }
 }
 
-void InvertedIndex::get_words(vector<string>& words, const string &str) {
-    string new_word;
-    string temp_str = " " + str;
+void InvertedIndex::get_words(std::vector<std::string>& words, const std::string &str) {
+    std::string new_word;
+    std::string temp_str = " " + str;
     for (int a = 0; a < temp_str.size(); ++a) {
         if (a > 0 && temp_str[a] != ' ' && temp_str[a - 1] == ' ') {
             while (temp_str[a] != ' ' && a < temp_str.size()) {
@@ -56,8 +56,8 @@ void InvertedIndex::get_words(vector<string>& words, const string &str) {
     }
 }
 
-string InvertedIndex::construct_str(vector<string> vec) {
-    string str;
+std::string InvertedIndex::construct_str(std::vector<std::string> vec) {
+    std::string str;
     for (int a = 0; a < vec.size(); ++a)
         if (a + 1 != vec.size()) str += vec[a] + " ";
         else str += vec[a];
@@ -65,11 +65,11 @@ string InvertedIndex::construct_str(vector<string> vec) {
     return str;
 }
 
-vector<Entry> InvertedIndex::get_word_count(const string& word) {
+std::vector<Entry> InvertedIndex::get_word_count(const std::string& word) {
     int doc_num = 1;
-    vector<string> vec_word;
+    std::vector<std::string> vec_word;
     get_words(vec_word, word);
-    vector<string> words;
+    std::vector<std::string> words;
 
     for (const auto& doc : docs) {
         if (doc == "") {
@@ -106,14 +106,14 @@ vector<Entry> InvertedIndex::get_word_count(const string& word) {
         words.clear();
     }
     if (!freq_dictionary.contains(word))
-        throw non_word();
+        throw non_word(word);
     return freq_dictionary[word];
 }
 
-map<std::string, vector<Entry>> InvertedIndex::get_dictionary() const {
+std::map<std::string, std::vector<Entry>> InvertedIndex::get_dictionary() const {
     return freq_dictionary;
 }
 
-void InvertedIndex::set_docs(vector<string> new_docs) {
+void InvertedIndex::set_docs(std::vector<std::string> new_docs) {
     docs = new_docs;
 }

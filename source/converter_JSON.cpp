@@ -1,10 +1,11 @@
 #include "converter_JSON.h"
+//#include <filesystem>
 
 Converter_JSON::Converter_JSON() = default;
 
 void Converter_JSON::correct_config() {
     json jfile;
-    ifstream json_stream("..//JSON//config.json");
+    std::ifstream json_stream("../JSON/config.json");
     if (!json_stream.is_open()) {
         json_stream.close();
         throw non_config();
@@ -16,24 +17,28 @@ void Converter_JSON::correct_config() {
     }
 }
 
-vector<string> Converter_JSON::get_vector(json json_array) {
+std::vector<std::string> Converter_JSON::get_vector(json json_array) {
     for(const auto& json_str : json_array) {
-        ifstream json_stream(json_str);
+        std::ifstream json_stream(json_str);
         if (!json_stream.is_open()) {
-            cout << "File open error.\n";
+            
+            //cout << json_str << "\n";
+            std::cout << "File " << json_str << " open error.\n";
             paths.push_back(" ");
         }
-        else
+        else {
+            std::cout << "File " << json_str << " opened\n";
             paths.push_back(json_str);
+        }
         json_stream.close();
     }
     return paths;
 }
 
-vector<string> Converter_JSON::get_text_documents() {
+std::vector<std::string> Converter_JSON::get_text_documents() {
     paths.clear();
     json jfile;
-    ifstream json_stream("..//JSON//config.json");
+    std::ifstream json_stream("../JSON/config.json");
     json_stream >> jfile;
 
     jfile["config"].contains("max_responses") ? max_str = jfile["config"]["max_responses"] : max_str = 5;
@@ -48,7 +53,7 @@ int Converter_JSON::get_responses_limit() {
 
 void Converter_JSON::correct_request() {
     json jfile;
-    ifstream json_stream("..//JSON//requests.json");
+    std::ifstream json_stream("../JSON/requests.json");
     if (!json_stream.is_open()) {
         json_stream.close();
         throw non_request();
@@ -59,10 +64,10 @@ void Converter_JSON::correct_request() {
         throw non_request_key();
     }
 }
-vector<string> Converter_JSON::get_requests() {
+std::vector<std::string> Converter_JSON::get_requests() {
     requests.clear();
     json jfile;
-    ifstream json_stream("..//JSON//requests.json");
+    std::ifstream json_stream("../JSON/requests.json");
     json_stream >> jfile;
 
     json_stream.close();
@@ -72,7 +77,7 @@ vector<string> Converter_JSON::get_requests() {
     return requests;
 }
 
-json Converter_JSON::construct_result_func(int request_num, vector<RelativeIndex> vec_result) {
+json Converter_JSON::construct_result_func(int request_num, std::vector<RelativeIndex> vec_result) {
     json result;
     json json_pair;
     if (vec_result.size() > 1) {
@@ -87,17 +92,17 @@ json Converter_JSON::construct_result_func(int request_num, vector<RelativeIndex
     }
 
     if (vec_result[0].rank == 0) {
-        result["request" + to_string(request_num)] = {"result", "false"};
+        result["request" + std::to_string(request_num)] = {"result", "false"};
         return result;
     } else {
-        result["request" + to_string(request_num)] = {{"result", "true"}, json_pair};
+        result["request" + std::to_string(request_num)] = {{"result", "true"}, json_pair};
         return result;
     }
 
 }
 
-void Converter_JSON::put_answers(vector<vector<RelativeIndex>>answers) {
-    ofstream answers_stream("..//JSON//answers.json");
+void Converter_JSON::put_answers(std::vector<std::vector<RelativeIndex>>answers) {
+    std::ofstream answers_stream("../JSON/answers.json");
     json json_answers;
 
     for (int a = 0; a < answers.size(); ++a) {
