@@ -1,28 +1,8 @@
-#enable_testing()
-#add_subdirectory(test_convert_JSON)
-#enable_testing()
-#add_subdirectory(test_inverted_index)
-#enable_testing()
-#add_subdirectory(test_search_server)
-
 project(tests)
 
 cmake_minimum_required (VERSION 3.22)
 
 set(CMAKE_CXX_STANDARD 20)
-
-#set (MESSAGE_DIR ${CMAKE_SOURCE_DIR}/../src/message)
-
-#file(GLOB MESSAGE_SOURCES "${MESSAGE_DIR}/*.cpp")
-
-#set(TEST_SOURCES
-#    messagesTests.cpp
-#    ittiQueueTests.cpp
-#    ../src/utils.cpp 
-#    ../src/ittiQueue.cpp
-#    ${MESSAGE_SOURCES}
-#)
-
 
 set (MY_SOURCE_DIR ${CMAKE_SOURCE_DIR}/source)
 set (MY_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/include)
@@ -30,7 +10,9 @@ set (MY_SOURCE_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/source/include)
 
 add_executable(${PROJECT_NAME} ${MY_SOURCE_DIR}/converter_JSON.cpp 
                                 ${MY_SOURCE_DIR}/inverted_index.cpp 
-                                ${MY_SOURCE_DIR}/search_server.cpp 
+                                ${MY_SOURCE_DIR}/search_server.cpp
+                                ${MY_SOURCE_DIR}/reader.cpp
+                                ${MY_SOURCE_DIR}/writer.cpp
                                 test_inverted_index.cpp 
                                 test_search_server.cpp 
                                 source_test.cpp

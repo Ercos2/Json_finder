@@ -8,26 +8,25 @@ int main() {
     Converter_JSON convert;
     InvertedIndex interted;
 
-    try {
-        convert.correct_config();
-        convert.correct_request();
+    std::string config_path = "../JSON/config.json";
+    std::string requests_path = "../JSON/requests.json";
+    std::string answers_path = "../JSON/answers.json";
+
+    try{
+        convert.is_json_key_correct(config_path, "config");
+        std::cout << "key \"config\" in config is correct\n";
+        convert.is_json_key_correct(config_path, "files");
+        std::cout << "key \"files\" in config is correct\n";
+        convert.is_json_key_correct(requests_path, "requests");
+        std::cout << "requests is correct\n";
     }
-    catch (const non_config &x) {
+    catch (const my_exception_with_str &x) {
         std::cout << x.what();
         return 1;
     }
-    catch (const non_config_key &x) {
-        std::cout << x.what();
-        return 1;
-    }
-    catch (const non_request &x) {
-        std::cout << x.what();
-    }
-    catch (const non_request_key &x) {
-        std::cout << x.what();
-    }
-    paths = convert.get_text_documents();
-    requests = convert.get_requests();
+
+    paths = convert.get_str_vec_by_key(config_path, "files");
+    requests = convert.get_str_vec_by_key(requests_path, "requests");
 
     interted.update_document_base(paths);
     for (const auto& req : requests) {
@@ -38,7 +37,7 @@ int main() {
 
     std::vector<std::vector<RelativeIndex>> search_result = search.search(requests);
 
-    convert.put_answers(search_result);
+    convert.write_answers(answers_path, search_result);
 
     return 0;
 }

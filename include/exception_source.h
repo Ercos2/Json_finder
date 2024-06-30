@@ -2,41 +2,27 @@
 
 #include "projects_source.h"
 
-class non_config : public std::exception {
+class my_exception_with_str : public std::exception {
+protected:
+    const std::string what_str;
 public:
+    my_exception_with_str(std::string new_what_str) : what_str(new_what_str){};
     const char* what() const noexcept override {
-        return "config file is missing!\n";
+        return what_str.c_str();
     }
 };
 
-class non_config_key : public std::exception {
+class non_file : public my_exception_with_str {
 public:
-    const char* what() const noexcept override {
-        return "config file is empty!\n";
-    }
+    non_file(std::string new_file_type) : my_exception_with_str(new_file_type + " file is missing!\n") {}
 };
 
-class non_request : public std::exception {
+class non_key : public my_exception_with_str {
 public:
-    const char* what() const noexcept override {
-        return "request file is missing!\n";
-    }
+    non_key(std::string new_file_type) : my_exception_with_str("key \"" + new_file_type + "\" is missing!\n") {}
 };
 
-class non_request_key : public std::exception {
+class non_word : public my_exception_with_str {
 public:
-    const char* what() const noexcept override {
-        return "request file is empty!\n";
-    }
-};
-
-class non_word : public std::exception {
-    const std::string word;
-public:
-    non_word(std::string new_word) : word("word \"" + new_word + "\" not found!\n") {}; 
-    const char* what() const noexcept override {
-        //word = string("word " + word + " not found!\n");
-        return word.c_str();
-        //return "word "  word << " not found!\n";
-    }
+    non_word(std::string word) : my_exception_with_str("word \"" + word + "\" not found!\n") {}; 
 };

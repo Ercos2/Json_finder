@@ -13,14 +13,12 @@ add_subdirectory(nlohmann_json)
 add_subdirectory(tests)
 
 add_executable(${PROJECT_NAME} main.cpp
-        ${MY_INCLUDE_DIR}/projects_source.h
-        ${MY_INCLUDE_DIR}/exception_source.h
         ${MY_SOURCE_DIR}/converter_JSON.cpp
         ${MY_SOURCE_DIR}/inverted_index.cpp
         ${MY_SOURCE_DIR}/search_server.cpp
-        ${MY_SOURCE_INCLUDE_DIR}/converter_JSON.h
-        ${MY_SOURCE_INCLUDE_DIR}/inverted_index.h
-        ${MY_SOURCE_INCLUDE_DIR}/search_server.h)
+        ${MY_SOURCE_DIR}/reader.cpp
+        ${MY_SOURCE_DIR}/writer.cpp
+        )
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${MY_INCLUDE_DIR} ${MY_SOURCE_DIR} ${MY_SOURCE_INCLUDE_DIR})
 target_link_libraries(${PROJECT_NAME} PUBLIC nlohmann_json::nlohmann_json)
