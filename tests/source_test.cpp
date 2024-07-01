@@ -44,5 +44,6 @@ void TestInvertedIndexFunctionality(
         catch (const non_word &x) { std::cout << x.what(); }
     }
     //output_entry_vec_vec(result);
+    //output_entry_vec_vec(expected);
     ASSERT_EQ(result, expected);
 }

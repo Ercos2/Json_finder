@@ -1,6 +1,11 @@
 #include "inverted_index.h"
 #include "search_server.h"
 #include "converter_JSON.h"
+//#include "threadPool.h"
+//#include <condition_variable>
+
+// std::mutex pool_mute;
+// std::condition_variable cv;
 
 int main() {
     std::vector<std::string> paths;
@@ -29,10 +34,26 @@ int main() {
     requests = convert.get_str_vec_by_key(requests_path, "requests");
 
     interted.update_document_base(paths);
+
+    std::mutex pool_mute;
+    std::condition_variable cv;
+    ThreadPool pool;
+    int finish = 0;
+
     for (const auto& req : requests) {
+        pool.enqueue([&]{
         try { interted.get_word_count(req); }
-        catch (const non_word &x) { std::cout << x.what(); }
+        catch (const my_exception_with_str &x) { std::cout << x.what(); }
+        pool_mute.lock();
+        ++finish;
+        pool_mute.unlock();
+        cv.notify_all();
+        });
     }
+
+    std::unique_lock<std::mutex> lk(pool_mute);
+    cv.wait(lk, [&]() { return finish == requests.size(); });
+    
     SearchServer search(interted);
 
     std::vector<std::vector<RelativeIndex>> search_result = search.search(requests);

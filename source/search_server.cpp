@@ -30,7 +30,9 @@ std::vector<std::vector<RelativeIndex>> SearchServer::search(const std::vector<s
         iter_flag = false;
     }
     for (auto& p_relative_vec : relative_vec_vec) {
-        sort(p_relative_vec.begin(), p_relative_vec.end());
+        sort(p_relative_vec.begin(), p_relative_vec.end(), [](RelativeIndex& first, RelativeIndex& second){
+            return first.rank > second.rank;
+            });
         double absolut = p_relative_vec[0].rank;
         for (auto& p_relative : p_relative_vec)
             if (absolut != 0) p_relative.rank /= absolut;

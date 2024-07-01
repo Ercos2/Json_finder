@@ -1,44 +1,44 @@
 #include "inverted_index.h"
 
-void update(std::string str, std::string& modify_str, std::vector<bool>& end_vec) {
-    std::ifstream file_stream(str);
+InvertedIndex::InvertedIndex() = default;
+
+std::string update(std::string path) {
+    std::string modify_str = "";
+    std::ifstream file_stream(path);
     if (!file_stream.is_open())
         modify_str = "";
     else {
         while (!file_stream.eof()) {
-            getline(file_stream, str);
-            modify_str += " " + str;
+            std::string temp_str;
+            getline(file_stream, temp_str);
+            modify_str += " " + temp_str;
         }
     }
     file_stream.close();
-    update_mute.lock();
-    end_vec.push_back(1);
-    update_mute.unlock();
+    return modify_str;
 }
 
-InvertedIndex::InvertedIndex() = default;
-
 void InvertedIndex::update_document_base(std::vector<std::string> input_docs) {
-    std::vector<std::string> vec_str(input_docs.size());
-    std::vector<bool> end_vec;
-    std::vector<std::thread> updates(input_docs.size());
-    for (int a = 0; a < input_docs.size(); ++a) {
-        //if ()
-        std::thread update1(update, input_docs[a], ref(vec_str[a]), ref(end_vec));
-        swap(update1, updates[a]);
-    }
-    while (true) {
-        update_mute.lock();
-        if (end_vec.size() >= input_docs.size()) {
-            for (int a = 0; a < updates.size(); ++a) {
-                docs.push_back(vec_str[a]);
-                updates[a].join();
-            }
-            update_mute.unlock();
-            break;
-        } else
-            update_mute.unlock();
-    }
+    ThreadPool pool;
+    int finish = 0;
+    std::condition_variable cv;
+    docs = std::vector<std::string>(input_docs.size(), "");
+
+    auto new_update{ [&](std::string& input_doc, std::string& doc){
+        pool.enqueue([&]{
+                doc = update(input_doc);
+                update_mute.lock();
+                ++finish;
+                update_mute.unlock();
+                cv.notify_all();
+            });
+    }};
+
+    for (int a = 0; a < input_docs.size(); ++a) 
+        new_update(input_docs[a], docs[a]);
+        
+    std::unique_lock<std::mutex> lk(update_mute);
+    cv.wait(lk, [&](){return finish == input_docs.size();});
 }
 
 void InvertedIndex::get_words(std::vector<std::string>& words, const std::string &str) {
@@ -56,58 +56,49 @@ void InvertedIndex::get_words(std::vector<std::string>& words, const std::string
     }
 }
 
-std::string InvertedIndex::construct_str(std::vector<std::string> vec) {
-    std::string str;
-    for (int a = 0; a < vec.size(); ++a)
-        if (a + 1 != vec.size()) str += vec[a] + " ";
-        else str += vec[a];
-
-    return str;
-}
-
-std::vector<Entry> InvertedIndex::get_word_count(const std::string& word) {
-    int doc_num = 1;
-    std::vector<std::string> vec_word;
-    get_words(vec_word, word);
+std::vector<Entry> InvertedIndex::get_word_count(const std::string& string_words) {
+    std::vector<std::string> vector_words;
+    get_words(vector_words, string_words);
     std::vector<std::string> words;
+    std::vector<Entry> temp_vec;
 
-    for (const auto& doc : docs) {
-        if (doc == "") {
-            ++doc_num;
+    for (size_t doc_num = 0; doc_num < docs.size(); ++doc_num) {
+        if (docs[doc_num] == "") 
             continue;
-        }
-        get_words(words, doc);
-        for (int a = 0; a < words.size(); ++a) {
-            for(const auto& temp_word : vec_word) {
-                if (words[a] == temp_word) {
-                    if (!freq_dictionary.contains(construct_str(vec_word))) {
-                        Entry new_entry(doc_num, 1);
-                        freq_dictionary[construct_str(vec_word)].push_back(new_entry);
+        get_words(words, docs[doc_num]);
+        for (const auto &word : words) {
+            for(const auto& temp_word : vector_words) {
+                if (word == temp_word) {
+                    if (temp_vec.empty()) {
+                        temp_vec.push_back({doc_num + 1, 1});
                     } else {
                         bool flag = false;
-                        for (const auto& entry: freq_dictionary[construct_str(vec_word)]) {
-                            if (entry.doc_id == doc_num) {
-                                Entry new_entry(entry.doc_id, (entry.count + 1));
-                                freq_dictionary[construct_str(vec_word)].pop_back();
-                                freq_dictionary[construct_str(vec_word)].push_back(new_entry);
+                        for (const auto& entry: temp_vec) {
+                            if (entry.doc_id == doc_num + 1) {
+                                temp_vec.pop_back();
+                                temp_vec.push_back({entry.doc_id, (entry.count + 1)});
                                 flag = true;
                                 break;
                             }
                         }
                         if (!flag) {
-                            Entry new_entry(doc_num, 1);
-                            freq_dictionary[construct_str(vec_word)].push_back(new_entry);
+                            temp_vec.push_back({doc_num + 1, 1});
                         }
                     }
                 }
             }
         }
-        ++doc_num;
         words.clear();
     }
-    if (!freq_dictionary.contains(word))
-        throw non_word(word);
-    return freq_dictionary[word];
+
+    if (temp_vec.empty())
+        throw non_word(string_words);
+
+    count_mute.lock();
+    freq_dictionary[string_words] = temp_vec;
+    count_mute.unlock();
+
+    return freq_dictionary[string_words];
 }
 
 std::map<std::string, std::vector<Entry>> InvertedIndex::get_dictionary() const {

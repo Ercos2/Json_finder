@@ -13,6 +13,7 @@ add_executable(${PROJECT_NAME} ${MY_SOURCE_DIR}/converter_JSON.cpp
                                 ${MY_SOURCE_DIR}/search_server.cpp
                                 ${MY_SOURCE_DIR}/reader.cpp
                                 ${MY_SOURCE_DIR}/writer.cpp
+                                ${MY_SOURCE_DIR}/threadPool.cpp
                                 test_inverted_index.cpp 
                                 test_search_server.cpp 
                                 source_test.cpp

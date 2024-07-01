@@ -18,6 +18,7 @@ add_executable(${PROJECT_NAME} main.cpp
         ${MY_SOURCE_DIR}/search_server.cpp
         ${MY_SOURCE_DIR}/reader.cpp
         ${MY_SOURCE_DIR}/writer.cpp
+        ${MY_SOURCE_DIR}/threadPool.cpp
         )
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${MY_INCLUDE_DIR} ${MY_SOURCE_DIR} ${MY_SOURCE_INCLUDE_DIR})
